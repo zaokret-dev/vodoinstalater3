@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaPro Vodoinstalater | Profesionalne usluge u Beogradu</title>
+<meta name="description" content="Profesionalne vodoinstalaterske usluge u Beogradu. Hitne intervencije 24/7. Pozovite odmah!">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--blue:#0f2548;--cyan:#06b6d4;--accent:#f59e0b;--light:#f0f9ff;--gray:#64748b;--border:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--navy);overflow-x:hidden;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,22,40,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;border-bottom:1px solid rgba(6,182,212,.2)}
+.logo{font-size:1.7rem;font-weight:900;color:#fff;letter-spacing:3px;text-decoration:none}.logo span{color:var(--cyan)}
+.nav-menu{display:flex;align-items:center;gap:1.4rem;list-style:none}
+.nav-menu a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.82rem;font-weight:600;transition:color .2s;white-space:nowrap}
+.nav-menu a:hover,.nav-menu a.active{color:var(--cyan)}
+.nav-cta{background:var(--cyan)!important;color:var(--navy)!important;padding:.4rem 1rem;border-radius:4px;font-weight:700!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:#fff;display:block}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--navy);padding:1.5rem 5%;border-bottom:1px solid rgba(255,255,255,.1);z-index:998;flex-direction:column;gap:1rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,.8);text-decoration:none;font-size:1rem;font-weight:600;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-menu a:hover{color:var(--cyan)}
+/* HERO */
+#hero{min-height:100vh;background:linear-gradient(135deg,#0a1628 0%,#0f2548 60%,#091422 100%);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden;gap:4rem}
+.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.12) 0%,transparent 70%);top:50%;right:0;transform:translateY(-50%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);color:#06b6d4;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.5rem;animation:fadeUp .7s ease both}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.6rem);line-height:1.05;color:#fff;margin-bottom:1.25rem;animation:fadeUp .7s .1s ease both}
+.hero-title .hl{color:#06b6d4;display:block}
+.hero-desc{color:rgba(255,255,255,.62);font-size:1.05rem;line-height:1.85;max-width:460px;margin-bottom:2rem;animation:fadeUp .7s .2s ease both}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:.85rem 2rem;border-radius:4px;font-weight:700;font-size:.9rem;cursor:pointer;text-decoration:none;border:none;transition:all .2s;font-family:'DM Sans',sans-serif}
+.btn-primary{background:var(--cyan);color:var(--navy)}.btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent}.btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{background:var(--blue);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);animation:fadeUp .7s .4s ease both}
+.stat-n{font-weight:900;font-size:2.2rem;color:#06b6d4;line-height:1}
+.stat-l{font-size:.7rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.hero-img{position:relative;animation:fadeUp .9s .3s ease both}
+.hero-img img{width:100%;height:540px;object-fit:cover;display:block}
+.hero-img-card{position:absolute;bottom:-16px;left:-16px;background:#f59e0b;color:#0a1628;padding:1rem 1.4rem;font-weight:700;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.hero-img-card strong{font-size:1.8rem;display:block;line-height:1}
+.hero-img-badge{position:absolute;top:20px;right:-12px;background:#0a1628;border:2px solid #06b6d4;color:#fff;padding:.9rem 1.1rem;text-align:center;font-size:.72rem;font-weight:600;line-height:1.5}
+/* TICKER */
+.ticker{background:var(--cyan);overflow:hidden;padding:.7rem 0;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:2.5rem;animation:ticker 30s linear infinite}
+.ticker-item{color:var(--navy);font-weight:700;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;flex-shrink:0}
+.ticker-dot{width:6px;height:6px;background:var(--navy);border-radius:50%}
+/* SECTIONS */
+.section{padding:5.5rem 5%}.section-light{padding:5.5rem 5%;background:var(--light)}.section-dark{padding:5.5rem 5%;background:var(--navy)}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.section-label::after{content:'';flex:0 0 28px;height:1px;background:var(--cyan)}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:var(--navy);margin-bottom:12px}
+.section-sub{color:var(--gray);font-size:1rem;line-height:1.8;max-width:540px}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:16px}
+.center{text-align:center}.center .section-label{justify-content:center}.center .section-sub{margin:0 auto}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border)}
+.svc-card{background:#fff;padding:2.5rem 2rem;cursor:pointer;transition:all .3s;border-bottom:3px solid transparent}
+.svc-card:hover{background:var(--navy);border-bottom-color:var(--cyan)}
+.svc-card:hover .svc-name{color:#fff}.svc-card:hover .svc-desc{color:rgba(255,255,255,.55)}.svc-card:hover .svc-icon{background:var(--cyan)}
+.svc-icon{width:52px;height:52px;background:var(--light);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem;transition:all .3s}
+.svc-name{font-weight:800;font-size:1.05rem;margin-bottom:10px;color:var(--navy);transition:color .3s}
+.svc-desc{color:var(--gray);font-size:.875rem;line-height:1.75;transition:color .3s}
+/* STATS */
+.stats-bar{background:var(--cyan);padding:3rem 5%;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:2rem}
+.sbn{font-weight:900;font-size:2.5rem;color:var(--navy);line-height:1}
+.sbl{font-size:.8rem;color:rgba(10,22,40,.7);text-transform:uppercase;letter-spacing:1px;margin-top:4px;font-weight:600}
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem}
+.p-step{text-align:center}
+.p-num{width:60px;height:60px;border-radius:50%;border:2px solid var(--cyan);background:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.2rem;color:var(--cyan);margin:0 auto 1.25rem;transition:all .3s}
+.p-step:hover .p-num{background:var(--cyan);color:var(--navy)}
+.p-title{font-weight:800;margin-bottom:8px;font-size:1rem}
+.p-text{color:var(--gray);font-size:.875rem;line-height:1.7}
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.testi-card{background:#fff;padding:1.75rem;border:1px solid var(--border);transition:all .3s}
+.testi-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-4px)}
+.testi-quote{font-family:Georgia,serif;font-style:italic;font-size:3rem;color:var(--cyan);line-height:1;margin-bottom:8px}
+.stars{color:var(--accent);font-size:.85rem;margin-bottom:8px}
+.testi-text{color:#334155;line-height:1.8;font-size:.9rem;margin-bottom:16px}
+.author-wrap{display:flex;align-items:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:.85rem;flex-shrink:0}
+.author-name{font-weight:700;font-size:.875rem}.author-loc{font-size:.75rem;color:var(--gray)}
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-card{border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:all .3s}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.blog-img{overflow:hidden;height:220px}.blog-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.blog-card:hover .blog-img img{transform:scale(1.06)}
+.blog-body{padding:1.5rem}
+.blog-tag{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.blog-title{font-weight:800;font-size:1.05rem;line-height:1.4;color:var(--navy);margin-bottom:8px}
+.blog-exc{color:var(--gray);font-size:.85rem;line-height:1.7;margin-bottom:12px}
+.blog-meta{font-size:.75rem;color:#94a3b8;display:flex;gap:12px}
+.blog-read-more{color:var(--cyan);font-weight:700;font-size:.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:12px}
+/* CTA */
+.cta-banner{background:var(--navy);padding:5rem 5%;text-align:center}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;margin-bottom:12px}
+.cta-banner p{color:rgba(255,255,255,.65);font-size:1.05rem;margin-bottom:2rem}
+/* FOOTER */
+footer{background:#060e1c;padding:4rem 5% 2rem;border-top:1px solid rgba(255,255,255,.05)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.footer-logo{font-size:1.7rem;font-weight:900;color:#fff;letter-spacing:3px;text-decoration:none;display:block;margin-bottom:12px}
+.footer-logo span{color:var(--cyan)}
+.footer-desc{color:rgba(255,255,255,.4);font-size:.85rem;line-height:1.8}
+.footer-h{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.85rem;transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom p{color:rgba(255,255,255,.28);font-size:.78rem}
+/* ANIM */
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){#hero{grid-template-columns:1fr;text-align:center}.hero-glow,.hero-img{display:none}.hero-desc{margin:0 auto 2rem}.hero-btns{justify-content:center}.hero-stats{justify-content:center}}
+@media(max-width:768px){.nav-menu{display:none}.hamburger{display:flex}.services-grid,.blog-grid,.testi-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.stats-bar{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.process-grid,.stats-bar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/">Aqua<span>Pro</span></a>
+  <ul class="nav-menu">
+    <li><a href="/" class="active">Početna</a></li>
+    <li><a href="about/">O nama</a></li>
+    <li><a href="gallery/">Galerija</a></li>
+    <li><a href="blog/">Blog</a></li>
+    <li><a href="shop/">Prodavnica</a></li>
+    <li><a href="faq/">FAQ</a></li>
+    <li><a href="testimonials/">Recenzije</a></li>
+    <li><a href="contact/" class="nav-cta">Kontakt</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu">
+  <a href="/">Početna</a><a href="about/">O nama</a><a href="gallery/">Galerija</a>
+  <a href="blog/">Blog</a><a href="shop/">Prodavnica</a><a href="faq/">FAQ</a>
+  <a href="testimonials/">Recenzije</a><a href="contact/">Kontakt</a><a href="privacy/">Privatnost</a>
+</div>
+
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div>
+    <div class="hero-badge">⚡ Hitne intervencije 0–24h</div>
+    <h1 class="hero-title">Vaš Dom,<span class="hl">Naša Briga</span></h1>
+    <p class="hero-desc">Profesionalne vodoinstalaterske usluge sa garancijom kvaliteta. Od hitnih popravki do kompletnih instalacija — tu smo kada vam je najpotrebnije.</p>
+    <div class="hero-btns">
+      <a href="contact/" class="btn btn-primary">📞 Zakažite odmah</a>
+      <a href="about/" class="btn btn-outline">O nama →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">15+</div><div class="stat-l">God. iskustva</div></div>
+      <div><div class="stat-n">2400</div><div class="stat-l">Klijenata</div></div>
+      <div><div class="stat-n">24/7</div><div class="stat-l">Dostupnost</div></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Vodoinstalater">
+    <div class="hero-img-card"><strong>100%</strong>Garancija posla</div>
+    <div class="hero-img-badge">🛡️<br>Licencirani<br>majstori</div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-dot"></span>Hitne intervencije</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Zamena cevi</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Otpušavanje odvoda</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Montaža kupatila</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Centralno grejanje</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Detekcija curenja</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Besplatna procena</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Hitne intervencije</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Zamena cevi</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Otpušavanje odvoda</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Montaža kupatila</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Centralno grejanje</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Detekcija curenja</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Besplatna procena</span>
+  </div>
+</div>
+
+<section class="section-light" id="services">
+  <div class="section-header">
+    <div><div class="section-label">Šta radimo</div><h2 class="section-title">Sve vodoinstalaterske<br>usluge na jednom mestu</h2></div>
+    <p class="section-sub" style="max-width:300px">Profesionalni tim spreman za svaki izazov.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card reveal"><div class="svc-icon">🚨</div><div class="svc-name">Hitne intervencije</div><p class="svc-desc">Curenje vode, poplava ili havarija? Dolazimo za 30–60 minuta, 7 dana u nedelji, tokom cele godine.</p></div>
+    <div class="svc-card reveal"><div class="svc-icon">🔧</div><div class="svc-name">Zamena i popravka cevi</div><p class="svc-desc">Stare, zahrđale ili puknute cevi? Koristimo savremene materijale sa dugogodišnjom garancijom.</p></div>
+    <div class="svc-card reveal"><div class="svc-icon">🚿</div><div class="svc-name">Montaža kupatila</div><p class="svc-desc">Kompletna montaža tuš kabina, kada, WC šolja, umivaonika i svih sanitarnih elemenata.</p></div>
+    <div class="svc-card reveal"><div class="svc-icon">🌡️</div><div class="svc-name">Centralno grejanje</div><p class="svc-desc">Ugradnja, servis i popravka sistema centralnog grejanja. Radijatori, kolektori, pumpe.</p></div>
+    <div class="svc-card reveal"><div class="svc-icon">💧</div><div class="svc-name">Otpušavanje odvoda</div><p class="svc-desc">Profesionalna oprema za čišćenje začepljenih odvoda i kanalizacionih cevi.</p></div>
+    <div class="svc-card reveal"><div class="svc-icon">🔍</div><div class="svc-name">Detekcija curenja</div><p class="svc-desc">Modernom opremom pronalazimo curenja i vlagu iza zidova bez rušenja i nepotrebne štete.</p></div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div><div class="sbn">15+</div><div class="sbl">Godina iskustva</div></div>
+  <div><div class="sbn">2400+</div><div class="sbl">Zadovoljnih klijenata</div></div>
+  <div><div class="sbn">98%</div><div class="sbl">Stopa zadovoljstva</div></div>
+  <div><div class="sbn">24/7</div><div class="sbl">Uvek dostupni</div></div>
+</div>
+
+<section class="section">
+  <div class="center" style="margin-bottom:4px">
+    <div class="section-label">Kako radimo</div>
+    <h2 class="section-title">Jednostavan proces, sjajan rezultat</h2>
+  </div>
+  <div class="process-grid">
+    <div class="p-step reveal"><div class="p-num">01</div><div class="p-title">Pozovite nas</div><p class="p-text">Nazovite ili pošaljite poruku. Odgovaramo odmah, dostupni 24/7.</p></div>
+    <div class="p-step reveal"><div class="p-num">02</div><div class="p-title">Besplatna procena</div><p class="p-text">Dolazimo i pregledamo problem. Jasna ponuda bez iznenađenja.</p></div>
+    <div class="p-step reveal"><div class="p-num">03</div><div class="p-title">Radovi</div><p class="p-text">Naš tim izvodi radove brzo, uredno i profesionalno.</p></div>
+    <div class="p-step reveal"><div class="p-num">04</div><div class="p-title">Garancija</div><p class="p-text">Svaki posao nosi pisanu garanciju. Vaše zadovoljstvo je prioritet.</p></div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="section-header">
+    <div><div class="section-label">Recenzije</div><h2 class="section-title">Šta kažu naši klijenti</h2></div>
+    <a href="testimonials/" class="btn btn-dark">Sve recenzije →</a>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Noćas oko 23h prsnula cev u kuhinji. Nazvala sam AquaPro i za 45 minuta su bili kod mene! Neverovatno brza reakcija i profesionalan posao.</p><div class="author-wrap"><div class="avatar">MJ</div><div><div class="author-name">Milica Janković</div><div class="author-loc">📍 Novi Beograd</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Renovirali smo kompletno kupatilo. Ekipa je bila precizna i uredna. Cena tačno onako kako su rekli — bez iznenađenja.</p><div class="author-wrap"><div class="avatar">SP</div><div><div class="author-name">Stefan Petrović</div><div class="author-loc">📍 Zemun</div></div></div></div>
+    <div class="testi-card reveal"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Imali smo problem sa curenjem koji niko nije mogao da pronađe godinama. AquaPro ga je locirao za sat vremena. Odlična usluga!</p><div class="author-wrap"><div class="avatar">AN</div><div><div class="author-name">Ana Nikolić</div><div class="author-loc">📍 Vračar</div></div></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <div><div class="section-label">Saveti i vesti</div><h2 class="section-title">Najnoviji Blog</h2></div>
+    <a href="blog/" class="btn btn-dark">Svi tekstovi →</a>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal"><div class="blog-img"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Blog 1" loading="lazy"></div><div class="blog-body"><div class="blog-tag">Saveti za dom</div><h3 class="blog-title">5 znakova da vam cevi trebaju hitnu pažnju</h3><p class="blog-exc">Naučite prepoznati rane simptome problema sa instalacijama pre nego što preraste u skupu havariju.</p><div class="blog-meta"><span>📅 15. mart 2025.</span><span>⏱ 4 min</span></div><a href="blog/" class="blog-read-more">Čitaj više →</a></div></div>
+    <div class="blog-card reveal"><div class="blog-img"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Blog 2" loading="lazy"></div><div class="blog-body"><div class="blog-tag">Štednja energije</div><h3 class="blog-title">Kako smanjiti račune za vodu za 30%?</h3><p class="blog-exc">Praktični saveti o slavinama i sistemima koji vam mogu doneti veliku uštedu na duge staze.</p><div class="blog-meta"><span>📅 2. feb. 2025.</span><span>⏱ 6 min</span></div><a href="blog/" class="blog-read-more">Čitaj više →</a></div></div>
+    <div class="blog-card reveal"><div class="blog-img"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Blog 3" loading="lazy"></div><div class="blog-body"><div class="blog-tag">Renoviranje</div><h3 class="blog-title">Moderno kupatilo 2025 — trendovi i saveti</h3><p class="blog-exc">Šta je in ove godine u dizajnu kupatila i kako instalacije utiču na izbor sanitarija.</p><div class="blog-meta"><span>📅 10. jan. 2025.</span><span>⏱ 5 min</span></div><a href="blog/" class="blog-read-more">Čitaj više →</a></div></div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Potrebna Vam je Pomoć?</h2>
+  <p>Brza, profesionalna i pouzdana vodoinstalaterska usluga na dohvat ruke.</p>
+  <a href="contact/" class="btn btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem">📞 Zakažite odmah</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><a class="footer-logo" href="/">Aqua<span>Pro</span></a><p class="footer-desc">Profesionalne vodoinstalaterske usluge u Beogradu i okolini. Pouzdanost, brzina i garancija kvaliteta od 2009. godine.</p></div>
+    <div><div class="footer-h">Usluge</div><ul class="footer-links"><li><a href="/">Hitne intervencije</a></li><li><a href="/">Zamena cevi</a></li><li><a href="/">Montaža kupatila</a></li><li><a href="/">Centralno grejanje</a></li></ul></div>
+    <div><div class="footer-h">Kompanija</div><ul class="footer-links"><li><a href="about/">O nama</a></li><li><a href="gallery/">Galerija</a></li><li><a href="testimonials/">Recenzije</a></li><li><a href="blog/">Blog</a></li><li><a href="faq/">FAQ</a></li></ul></div>
+    <div><div class="footer-h">Pravno</div><ul class="footer-links"><li><a href="privacy/">Politika privatnosti</a></li><li><a href="contact/">Kontakt</a></li><li><a href="shop/">Prodavnica</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 AquaPro Vodoinstalater. Sva prava zadržana.</p><p>PIB: 123456789 | Beograd, Srbija</p></div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');
+  if(h&&m)h.addEventListener('click',function(){m.classList.toggle('open')});
+  var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+});
+</script>
+</body>
+</html>
