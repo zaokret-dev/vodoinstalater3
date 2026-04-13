@@ -1,7 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="sr">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kontakt | AquaPro Vodoinstalater</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | AquaPro Vodoinstalater</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0a1628;--blue:#0f2548;--cyan:#06b6d4;--accent:#f59e0b;--light:#f0f9ff;--gray:#64748b;--border:#e2e8f0}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -10,73 +14,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,22,40,.97
 .logo{font-size:1.7rem;font-weight:900;color:#fff;letter-spacing:3px;text-decoration:none}.logo span{color:var(--cyan)}
 .nav-menu{display:flex;align-items:center;gap:1.4rem;list-style:none}
 .nav-menu a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.82rem;font-weight:600;transition:color .2s;white-space:nowrap}
-.nav-menu a:hover,.nav-menu a.active{color:var(--cyan)}
+.nav-menu a:hover{color:var(--cyan)}
 .nav-cta{background:var(--cyan)!important;color:var(--navy)!important;padding:.4rem 1rem;border-radius:4px;font-weight:700!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{width:24px;height:2px;background:#fff;display:block}
 .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--navy);padding:1.5rem 5%;border-bottom:1px solid rgba(255,255,255,.1);z-index:998;flex-direction:column;gap:1rem}
 .mobile-menu.open{display:flex}
 .mobile-menu a{color:rgba(255,255,255,.8);text-decoration:none;font-size:1rem;font-weight:600;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:.85rem 2rem;border-radius:4px;font-weight:700;font-size:.9rem;cursor:pointer;text-decoration:none;border:none;transition:all .2s;font-family:'DM Sans',sans-serif}
-.btn-primary{background:var(--cyan);color:var(--navy)}.btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
-.btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{background:var(--blue);transform:translateY(-2px)}
-.btn-outline{border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent}.btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.mobile-menu a:hover{color:var(--cyan)}
 .page-header{padding:140px 5% 80px;background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);text-align:center}
 .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);color:#fff;margin-bottom:1rem}
 .page-header p{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:560px;margin:0 auto}
 .breadcrumb{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:1.5rem}
 .breadcrumb a{color:var(--cyan);text-decoration:none;font-size:.85rem}
 .breadcrumb span{color:rgba(255,255,255,.4);font-size:.85rem}
-.section{padding:5.5rem 5%}.section-light{padding:5.5rem 5%;background:var(--light)}.section-dark{padding:5.5rem 5%;background:var(--navy)}
+.section{padding:5.5rem 5%}
 .section-label{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .section-label::after{content:'';flex:0 0 28px;height:1px;background:var(--cyan)}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:var(--navy);margin-bottom:12px}
-.section-title-light{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:#fff;margin-bottom:12px}
 .section-sub{color:var(--gray);font-size:1rem;line-height:1.8;max-width:540px}
-.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:16px}
-.center{text-align:center}.center .section-label{justify-content:center}.center .section-sub{margin:0 auto}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border)}
-.svc-card{background:#fff;padding:2.5rem 2rem;cursor:pointer;transition:all .3s;border-bottom:3px solid transparent}
-.svc-card:hover{background:var(--navy);border-bottom-color:var(--cyan)}
-.svc-card:hover .svc-name{color:#fff}.svc-card:hover .svc-desc{color:rgba(255,255,255,.55)}.svc-card:hover .svc-icon{background:var(--cyan)}
-.svc-icon{width:52px;height:52px;background:var(--light);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem;transition:all .3s}
-.svc-name{font-weight:800;font-size:1.05rem;margin-bottom:10px;color:var(--navy);transition:color .3s}
-.svc-desc{color:var(--gray);font-size:.875rem;line-height:1.75;transition:color .3s}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.testi-card{background:#fff;padding:1.75rem;border:1px solid var(--border);transition:all .3s}
-.testi-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-4px)}
-.testi-quote{font-family:Georgia,serif;font-style:italic;font-size:3rem;color:var(--cyan);line-height:1;margin-bottom:8px}
-.stars{color:var(--accent);font-size:.85rem;margin-bottom:8px}
-.testi-text{color:#334155;line-height:1.8;font-size:.9rem;margin-bottom:16px}
-.author-wrap{display:flex;align-items:center;gap:12px}
-.avatar{width:40px;height:40px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:.85rem;flex-shrink:0}
-.author-name{font-weight:800;font-size:.875rem}.author-loc{font-size:.75rem;color:var(--gray)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.blog-card{border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:all .3s}
-.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
-.blog-img{overflow:hidden;height:220px}.blog-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.blog-card:hover .blog-img img{transform:scale(1.06)}
-.blog-body{padding:1.5rem}
-.blog-tag{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
-.blog-title{font-weight:800;font-size:1.05rem;line-height:1.4;color:var(--navy);margin-bottom:8px}
-.blog-exc{color:var(--gray);font-size:.85rem;line-height:1.7;margin-bottom:12px}
-.blog-meta{font-size:.75rem;color:#94a3b8;display:flex;gap:12px}
-.blog-read-more{color:var(--cyan);font-weight:700;font-size:.85rem;text-decoration:none;margin-top:12px;display:inline-block}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.g-item{overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/3}
-.g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.g-item:hover img{transform:scale(1.07)}
-.g-overlay{position:absolute;inset:0;background:rgba(10,22,40,.6);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center}
-.g-item:hover .g-overlay{opacity:1}
-.g-overlay span{color:#fff;font-weight:900;font-size:1rem;letter-spacing:2px;text-transform:uppercase}
-.faq-list{display:flex;flex-direction:column;gap:8px}
-.faq-item{border:1px solid var(--border);overflow:hidden}
-.faq-item.open{border-color:var(--cyan)}
-.faq-q{padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;font-weight:700;font-size:.95rem;color:var(--navy);user-select:none}
-.faq-icon{width:28px;height:28px;flex-shrink:0;background:var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--cyan);transition:all .3s;font-weight:900}
-.faq-item.open .faq-icon{background:var(--cyan);color:var(--navy);transform:rotate(45deg)}
-.faq-a{display:none;padding:0 1.5rem 1.2rem;color:var(--gray);font-size:.9rem;line-height:1.8}
-.faq-item.open .faq-a{display:block}
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start}
+.c-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:2rem}
+.c-icon{width:48px;height:48px;flex-shrink:0;background:var(--light);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:1px solid var(--border)}
+.c-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:3px;font-weight:700}
+.c-val{font-size:1rem;color:var(--navy);font-weight:600}
+.c-sub{font-size:.82rem;color:var(--gray);margin-top:2px}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
 .fg label{font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
 .fg input,.fg textarea,.fg select{border:1px solid var(--border);padding:.75rem 1rem;color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;background:#fff;width:100%}
@@ -85,69 +47,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,22,40,.97
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .btn-submit{background:var(--cyan);color:var(--navy);padding:.875rem;border:none;font-weight:700;font-size:.95rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;width:100%;margin-top:4px}
 .btn-submit:hover{background:var(--accent)}
-.stats-bar{background:var(--cyan);padding:3rem 5%;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:2rem}
-.sbn{font-weight:900;font-size:2.5rem;color:var(--navy);line-height:1}
-.sbl{font-size:.8rem;color:rgba(10,22,40,.7);text-transform:uppercase;letter-spacing:1px;margin-top:4px;font-weight:600}
-.cta-banner{background:var(--navy);padding:5rem 5%;text-align:center}
-.cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;margin-bottom:12px}
-.cta-banner p{color:rgba(255,255,255,.65);font-size:1.05rem;margin-bottom:2rem}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.about-img img{width:100%;height:500px;object-fit:cover;display:block}
-.about-img{position:relative}
-.about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--cyan);color:var(--navy);padding:1.5rem;text-align:center}
-.about-badge strong{font-size:2rem;font-weight:900;display:block;line-height:1}
-.about-badge span{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
-.about-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1.25rem}
-.about-text p{color:var(--gray);line-height:1.9;margin-bottom:1.25rem}
-.about-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin:1.5rem 0 2rem}
-.about-list li{display:flex;align-items:center;gap:10px;color:var(--gray);font-size:.9rem}
-.about-list li::before{content:'✓';width:22px;height:22px;background:var(--cyan);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
-.team-card{text-align:center}
-.team-img{width:140px;height:140px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;border:4px solid var(--cyan)}
-.team-img img{width:100%;height:100%;object-fit:cover;display:block}
-.team-name{font-weight:800;font-size:1rem;margin-bottom:4px}
-.team-role{color:var(--cyan);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
-.privacy-content{max-width:860px}
-.privacy-content h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin:2.5rem 0 .75rem}
-.privacy-content h3:first-child{margin-top:0}
-.privacy-content p,.privacy-content ul{color:var(--gray);font-size:.9rem;line-height:1.9;margin-bottom:.75rem}
-.privacy-content ul{padding-left:1.5rem}
-.privacy-content li{margin-bottom:.4rem}
-.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start}
-.c-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:2rem}
-.c-icon{width:48px;height:48px;flex-shrink:0;background:var(--light);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:1px solid var(--border)}
-.c-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:3px;font-weight:700}
-.c-val{font-size:1rem;color:var(--navy);font-weight:600}
-.c-sub{font-size:.82rem;color:var(--gray);margin-top:2px}
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.product-card{border:1px solid var(--border);overflow:hidden;transition:all .3s}
-.product-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-4px)}
-.product-img{height:220px;overflow:hidden}
-.product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.product-card:hover .product-img img{transform:scale(1.05)}
-.product-body{padding:1.5rem}
-.product-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.2rem .6rem;margin-bottom:10px;background:var(--cyan);color:var(--navy)}
-.product-name{font-weight:800;font-size:1.1rem;margin-bottom:8px}
-.product-desc{color:var(--gray);font-size:.875rem;line-height:1.7;margin-bottom:1rem}
-.product-price{font-size:1.5rem;font-weight:900;color:var(--navy);margin-bottom:1rem}
-.product-price small{font-size:.85rem;color:var(--gray);font-weight:400}
-.paypal-btn{background:#0070ba;color:#fff;border:none;padding:.85rem;font-size:.95rem;font-weight:700;cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s}
-.paypal-btn:hover{background:#005ea6}
 .alert-success{background:#dcfce7;border:1px solid #86efac;color:#166534;padding:1rem 1.25rem;margin-bottom:1rem;font-size:.9rem;display:none}
 .alert-success.show{display:block}
-.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2.5rem}
-.filter-btn{padding:.5rem 1.25rem;border:1px solid var(--border);background:#fff;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;color:var(--gray)}
-.filter-btn:hover,.filter-btn.active{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
-.ratings-box{background:var(--light);border:1px solid var(--border);padding:2rem;display:grid;grid-template-columns:180px 1fr;gap:2rem;align-items:center;margin-bottom:3rem}
-.rating-bar{display:flex;align-items:center;gap:1rem;margin-bottom:.5rem}
-.rlabel{font-size:.85rem;color:var(--gray);width:40px}
-.bar-wrap{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-.bar-fill{height:100%;background:var(--accent);border-radius:4px}
-.rcount{font-size:.82rem;color:var(--gray);width:35px;text-align:right}
-.overall-score{text-align:center}
-.big-score{font-size:4rem;font-weight:900;color:var(--navy);line-height:1}
-.stars-big{font-size:1.5rem;color:var(--accent);margin:.5rem 0}
 footer{background:#060e1c;padding:4rem 5% 2rem;border-top:1px solid rgba(255,255,255,.05)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
 .footer-logo{font-size:1.7rem;font-weight:900;color:#fff;letter-spacing:3px;text-decoration:none;display:block;margin-bottom:12px}
@@ -159,14 +60,9 @@ footer{background:#060e1c;padding:4rem 5% 2rem;border-top:1px solid rgba(255,255
 .footer-links a:hover{color:#fff}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .footer-bottom p{color:rgba(255,255,255,.28);font-size:.78rem}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:repeat(2,1fr)}.ratings-box{grid-template-columns:1fr}}
-@media(max-width:768px){.nav-menu{display:none}.hamburger{display:flex}.services-grid,.blog-grid,.testi-grid,.products-grid,.gallery-grid{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.about-badge{bottom:16px;right:16px}.form-row{grid-template-columns:1fr}.stats-bar{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.stats-bar,.team-grid{grid-template-columns:1fr}}
-</style></head>
+@media(max-width:768px){.nav-menu{display:none}.hamburger{display:flex}.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
 <body>
 <nav>
   <a class="logo" href="/vodoinstalater3/">Aqua<span>Pro</span></a>
@@ -180,70 +76,85 @@ footer{background:#060e1c;padding:4rem 5% 2rem;border-top:1px solid rgba(255,255
     <li><a href="/vodoinstalater3/testimonials/">Recenzije</a></li>
     <li><a href="/vodoinstalater3/contact/" class="nav-cta">Kontakt</a></li>
   </ul>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
 </nav>
-<div class="mobile-menu">
-  <a href="/vodoinstalater3/">Početna</a><a href="/vodoinstalater3/about/">O nama</a>
-  <a href="/vodoinstalater3/gallery/">Galerija</a><a href="/vodoinstalater3/blog/">Blog</a>
-  <a href="/vodoinstalater3/shop/">Prodavnica</a><a href="/vodoinstalater3/faq/">FAQ</a>
-  <a href="/vodoinstalater3/testimonials/">Recenzije</a><a href="/vodoinstalater3/contact/">Kontakt</a>
+<div class="mobile-menu" id="mob">
+  <a href="/vodoinstalater3/">Početna</a>
+  <a href="/vodoinstalater3/about/">O nama</a>
+  <a href="/vodoinstalater3/gallery/">Galerija</a>
+  <a href="/vodoinstalater3/blog/">Blog</a>
+  <a href="/vodoinstalater3/shop/">Prodavnica</a>
+  <a href="/vodoinstalater3/faq/">FAQ</a>
+  <a href="/vodoinstalater3/testimonials/">Recenzije</a>
+  <a href="/vodoinstalater3/contact/">Kontakt</a>
   <a href="/vodoinstalater3/privacy/">Politika privatnosti</a>
 </div>
-<div class="page-header"><div class="breadcrumb"><a href="/vodoinstalater3/">Početna</a><span>/</span><span>Kontakt</span></div><h1>Kontaktirajte nas</h1><p>Tu smo za vas — pozovite odmah ili pošaljite upit i odgovorićemo u roku od sat vremena.</p></div>
+<div class="page-header">
+  <div class="breadcrumb"><a href="/vodoinstalater3/">Početna</a><span>/</span><span>Kontakt</span></div>
+  <h1>Kontaktirajte nas</h1>
+  <p>Tu smo za vas — pozovite odmah ili pošaljite upit i odgovorićemo u roku od sat vremena.</p>
+</div>
 <section class="section">
   <div class="contact-grid">
     <div>
       <div class="section-label">Informacije</div>
       <h2 class="section-title">Zakažite odmah</h2>
       <p class="section-sub" style="margin-bottom:2rem">Besplatna procena za sve standardne usluge. Hitne intervencije dostupne 24/7.</p>
-      <div class="c-item"><div class="c-icon">📞</div><div><div class="c-label">Telefon</div><div class="c-val">+381 11 123 4567</div><div class="c-sub">Dostupni 24/7 za hitne slučajeve</div></div></div>
+      <div class="c-item"><div class="c-icon">📞</div><div><div class="c-label">Telefon</div><div class="c-val">+381 11 123 4567</div><div class="c-sub">Dostupni 24/7</div></div></div>
       <div class="c-item"><div class="c-icon">📱</div><div><div class="c-label">Viber / WhatsApp</div><div class="c-val">+381 64 123 4567</div><div class="c-sub">Odgovaramo u roku od 15 minuta</div></div></div>
-      <div class="c-item"><div class="c-icon">📧</div><div><div class="c-label">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="046d6a626b446575716574766b2a7677">[email&#160;protected]</a></div><div class="c-sub">Odgovaramo u roku od 2 sata</div></div></div>
+      <div class="c-item"><div class="c-icon">📧</div><div><div class="c-label">Email</div><div class="c-val">info@aquapro.rs</div><div class="c-sub">Odgovaramo u roku od 2 sata</div></div></div>
       <div class="c-item"><div class="c-icon">📍</div><div><div class="c-label">Adresa</div><div class="c-val">Bulevar Oslobođenja 123, Beograd</div><div class="c-sub">Pon–Pet: 08:00–17:00</div></div></div>
       <div class="c-item"><div class="c-icon">🕐</div><div><div class="c-label">Radno vreme</div><div class="c-val">Pon–Pet: 08:00–20:00</div><div class="c-sub">Sub: 09:00–17:00 | Ned: Hitne intervencije</div></div></div>
     </div>
     <div>
-      <div class="alert-success" id="form-alert">✅ Vaš upit je primljen! Kontaktiraćemo vas u roku od sat vremena.</div>
-      <form style="background:#fff;border:1px solid var(--border);padding:2.5rem" id="contact-form">
+      <div class="alert-success" id="form-alert">Vas upit je primljen! Kontaktiracemo vas uskoro.</div>
+      <form style="background:#fff;border:1px solid var(--border);padding:2.5rem" id="contact-form" novalidate>
         <div class="form-row">
-          <div class="fg"><label>Ime i prezime *</label><input type="text" placeholder="Marko Marković" required></div>
-          <div class="fg"><label>Telefon *</label><input type="tel" placeholder="+381 6x xxx xxxx" required></div>
+          <div class="fg"><label>Ime i prezime</label><input type="text" placeholder="Marko Markovic"></div>
+          <div class="fg"><label>Telefon</label><input type="tel" placeholder="+381 6x xxx xxxx"></div>
         </div>
         <div class="fg"><label>Email adresa</label><input type="email" placeholder="marko@primer.com"></div>
-        <div class="fg"><label>Vrsta usluge</label><select><option value="">Izaberite...</option><option>Hitna intervencija</option><option>Zamena i popravka cevi</option><option>Montaža kupatila</option><option>Centralno grejanje</option><option>Otpušavanje odvoda</option><option>Detekcija curenja</option><option>Ostalo</option></select></div>
+        <div class="fg"><label>Vrsta usluge</label>
+          <select><option value="">Izaberite...</option><option>Hitna intervencija</option><option>Zamena i popravka cevi</option><option>Montaza kupatila</option><option>Centralno grejanje</option><option>Otpusavanje odvoda</option><option>Detekcija curenja</option><option>Ostalo</option></select>
+        </div>
         <div class="fg"><label>Adresa</label><input type="text" placeholder="Npr. Novi Beograd, Jurija Gagarina 15"></div>
-        <div class="fg"><label>Opis problema *</label><textarea placeholder="Opišite ukratko problem ili uslugu..." required></textarea></div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><input type="checkbox" id="terms" style="width:18px;height:18px;flex-shrink:0"><label for="terms" style="font-size:.82rem;color:var(--gray);cursor:pointer">Prihvatam <a href="/vodoinstalater3/privacy/" style="color:var(--cyan)">politiku privatnosti</a> i saglasan/na sam da me kontaktirate.</label></div>
-        <button type="submit" class="btn-submit">📤 Pošalji upit</button>
+        <div class="fg"><label>Opis problema</label><textarea placeholder="Opisite ukratko problem..."></textarea></div>
+        <button type="submit" class="btn-submit">Posalji upit</button>
       </form>
     </div>
-  </div>
-  <div style="width:100%;height:300px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-top:2rem;flex-direction:column;gap:8px;color:var(--gray)">
-    🗺️ Google Mapa — Bulevar Oslobođenja 123, Beograd
-    <small style="font-size:.78rem">Unesite Google Maps Embed kod ovde</small>
   </div>
 </section>
 <footer>
   <div class="footer-grid">
-    <div><a class="footer-logo" href="/vodoinstalater3/">Aqua<span>Pro</span></a><p class="footer-desc">Profesionalne vodoinstalaterske usluge u Beogradu i okolini. Pouzdanost, brzina i garancija od 2009. godine.</p></div>
-    <div><div class="footer-h">Usluge</div><ul class="footer-links"><li><a href="/vodoinstalater3/">Hitne intervencije</a></li><li><a href="/vodoinstalater3/">Zamena cevi</a></li><li><a href="/vodoinstalater3/">Montaža kupatila</a></li><li><a href="/vodoinstalater3/">Centralno grejanje</a></li></ul></div>
-    <div><div class="footer-h">Kompanija</div><ul class="footer-links"><li><a href="/vodoinstalater3/about/">O nama</a></li><li><a href="/vodoinstalater3/gallery/">Galerija</a></li><li><a href="/vodoinstalater3/testimonials/">Recenzije</a></li><li><a href="/vodoinstalater3/blog/">Blog</a></li><li><a href="/vodoinstalater3/faq/">FAQ</a></li></ul></div>
-    <div><div class="footer-h">Pravno</div><ul class="footer-links"><li><a href="/vodoinstalater3/privacy/">Politika privatnosti</a></li><li><a href="/vodoinstalater3/contact/">Kontakt</a></li><li><a href="/vodoinstalater3/shop/">Prodavnica</a></li></ul></div>
+    <div><a class="footer-logo" href="/vodoinstalater3/">Aqua<span>Pro</span></a><p class="footer-desc">Profesionalne vodoinstalaterske usluge u Beogradu i okolini od 2009. godine.</p></div>
+    <div><div class="footer-h">Usluge</div><ul class="footer-links"><li><a href="/vodoinstalater3/">Hitne intervencije</a></li><li><a href="/vodoinstalater3/">Zamena cevi</a></li><li><a href="/vodoinstalater3/">Montaza kupatila</a></li></ul></div>
+    <div><div class="footer-h">Kompanija</div><ul class="footer-links"><li><a href="/vodoinstalater3/about/">O nama</a></li><li><a href="/vodoinstalater3/gallery/">Galerija</a></li><li><a href="/vodoinstalater3/blog/">Blog</a></li><li><a href="/vodoinstalater3/faq/">FAQ</a></li></ul></div>
+    <div><div class="footer-h">Pravno</div><ul class="footer-links"><li><a href="/vodoinstalater3/privacy/">Politika privatnosti</a></li><li><a href="/vodoinstalater3/contact/">Kontakt</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2025 AquaPro Vodoinstalater. Sva prava zadržana.</p><p>PIB: 123456789 | Beograd, Srbija</p></div>
+  <div class="footer-bottom"><p>2025 AquaPro Vodoinstalater. Sva prava zadrzana.</p><p>PIB: 123456789</p></div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.addEventListener('DOMContentLoaded',function(){
-  var h=document.querySelector('.hamburger'),m=document.querySelector('.mobile-menu');
-  if(h&&m)h.addEventListener('click',function(){m.classList.toggle('open')});
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      var item=this.parentElement;
-      document.querySelectorAll('.faq-item').forEach(function(i){if(i!==item)i.classList.remove('open')});
-      item.classList.toggle('open');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var h = document.getElementById('ham');
+  var m = document.getElementById('mob');
+  if (h && m) {
+    h.addEventListener('click', function() {
+      m.classList.toggle('open');
     });
-  });
-  var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-  var form=document.getElementById('contact-form');
-  if(form)form.addEventListener('submit',func
+  }
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var a = document.getElementById('form-alert');
+      if (a) {
+        a.classList.add('show');
+        setTimeout(function() { a.classList.remove('show'); }, 5000);
+      }
+      form.reset();
+    });
+  }
+});
+</script>
+</body>
+</html>
